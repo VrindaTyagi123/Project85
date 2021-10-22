@@ -11,24 +11,22 @@ greencar_x = 5;
 greencar_y = 225;
 
 function add() {
-	background_image = new Image();
+	background_imgTag = new Image();
 	background_imgTag.onload = uploadBackground;
 	background_imgTag.src = background_image;
-
-	greencar_imgTag = new Image();
-	greencar_imgTag.onload = uploadgreencar;
-	greencar_imgTag.src = greencar_image;
 }
 
-function uploadBackground()
-{
+function uploadBackground() {
+	
 	ctx.drawImage(background_imgTag, 0, 0, canvas.width, canvas.height);
+
 }
 
-function uploadgreencar() 
-{
-	ctx.drawImage(greencar_imgTag, greencar_x, greencar_y, greencar_width, greencar_height);
+function uploadgreencar() {
 
+	ctx.drawImage(greencar_image, greencar_x, greencar_y, greencar_width, greencar_height);
+
+	
 }
 
 
@@ -67,11 +65,10 @@ function my_keydown(e)
 
 function up()
 {
-	if(greencar_y >= 0)
+	if(greencar_y>=0);
 	{
-
-		greencar_y = greencar_y - 10;
-		console.log("when up arrow is pressed, x = " +greencar_x + " | y = " +greencar_y);
+		greencar_y = greencar_y-10;
+		console.log("When up arrow is pressed, X = " + greencar_x + " | y = "+greencar_y);
 		uploadBackground();
 		uploadgreencar();
 	}
@@ -79,11 +76,10 @@ function up()
 
 function down()
 {
-	if(greencar_y <= 500)
+	if(greencar_y<=500);
 	{
-
-		greencar_y = greencar_y + 10;
-		console.log("when down arrow is pressed, x = " +greencar_x + " | y = " +greencar_y);
+		greencar_y = greencar_y+10;
+		console.log("When down arrow is pressed, X = " + greencar_x + " | y = "+greencar_y);
 		uploadBackground();
 		uploadgreencar();
 	}
@@ -91,11 +87,10 @@ function down()
 
 function left()
 {
-	if(greencar_x >= 0)
+	if(greencar_x>=0);
 	{
-
-		greencar_x = greencar_x - 10;
-		console.log("when left arrow is pressed, x = " +greencar_x + " | y = " +greencar_y);
+		greencar_x = greencar_x-10;
+		console.log("When left arrow is pressed, X = " + greencar_x + " | y = "+greencar_y);
 		uploadBackground();
 		uploadgreencar();
 	}
@@ -103,11 +98,10 @@ function left()
 
 function right()
 {
-	if(greencar_y <= 700)
+	if(greencar_x<=700);
 	{
-
-		greencar_y = greencar_y + 10;
-		console.log("when right arrow is pressed, x = " +greencar_x + " | y = " +greencar_y);
+		greencar_x = greencar_x+10;
+		console.log("When right arrow is pressed, X = " + greencar_x + " | y = "+greencar_y);
 		uploadBackground();
 		uploadgreencar();
 	}
